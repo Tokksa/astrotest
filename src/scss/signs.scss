@@ -1,0 +1,239 @@
+.signs {
+    display: none;
+
+    @media ($m-l) {
+        display: block;
+        position: absolute;
+        height: 1020px;
+        width: 100%;
+    }
+}
+.signs__pic {
+   position: absolute;
+   z-index: 1;
+   color: #ffff;
+
+   -webkit-filter: blur(2px);
+   filter: blur(2px);
+
+   opacity: 0.8;
+
+   &--aquarius {
+    top: -5%;
+    bottom: auto;
+    left: auto;
+    right: 25%;
+    width: 218px;
+    height: 300px;
+    transform: rotate(0.32deg);
+       
+   }
+
+   &--aries {
+    top: auto;
+    bottom: 15%;
+    left: auto;
+    right: 25%;
+    width: 161px;
+    height: 88px;
+
+   }
+
+   &--capricorn {
+    top: auto;
+    bottom: 43%;
+    left: auto;
+    right: 22%;
+    width: 211px;
+    height: 188px;
+   }
+
+   &--cencer {
+    top: 30%;
+    bottom: auto;
+    left: 20%;
+    right: auto;
+
+   }
+
+   &--gemini {
+    top: auto;
+    bottom: 10%;
+    left: 35%;
+    right: auto;
+    width: 221.67px;
+    height: 186.09px;
+
+   }
+
+   &--leo {
+    top: auto;
+    bottom: 15%;
+    left: 22%;
+    right: auto;
+    width: 186.3px;
+    height: 297.53px;
+
+   }
+
+   &--libra {
+    top: -5%;
+    bottom: auto;
+    left: 17%;
+    right: auto;
+    width: 137.32px;
+    height: 167.07px;
+
+   }
+
+   &--pisces {
+    top: auto;
+    bottom: 15%;
+    left: auto;
+    right: 5%;
+    width: 238px;
+    height: 351.9px;
+
+   }
+
+   &--sagittarius {
+    top: -7%;
+    bottom: auto;
+    left: auto;
+    right: 44%;
+    width: 308.75px;
+    height: 251.33px;
+
+   }
+
+//    &--scoprio {
+//     top: 5%;
+//     bottom: auto;
+//     left: 30%;
+//     right: auto;
+
+//    }
+
+   &--taurus {
+    top: auto;
+    bottom: 10%;
+    left: auto;
+    right: 35%;
+    width: 189.02px;
+    height: 267.64px;
+
+   }
+
+   &--virgo {
+    top: 15%;
+    bottom: auto;
+    left: 5%;
+    right: auto;
+    width: 178.13px;
+    height: 349.18px;
+
+   }
+
+   &--aquariuscont {
+    width: 338.27px;
+    height: 476.48px;
+    top: auto;
+    bottom: -50%;
+    left: 11%;
+    right: auto;
+    z-index: 2;
+    color: #D3C5D7;
+
+    -webkit-filter: none;
+    filter: none;
+
+    opacity: 0.5;
+       
+   }
+
+   &--leocont {
+    width: 353px;
+    height: 500px;
+    top: 0;
+    bottom: auto;
+    left: auto;
+    right: 20%;
+    z-index: 2;
+    color: #E4C781;
+
+    -webkit-filter: none;
+    filter: none;
+    
+    opacity: 0.5;
+   }
+
+   &--aquarius_ui{
+    width: 334.6px;
+    height: 471.31px;
+    top: auto;
+    bottom: -25%;
+    left: 20%;
+    right: auto;
+    z-index: 2;
+
+    mix-blend-mode: overlay;
+
+    -webkit-filter: none;
+    filter: none;
+
+    transform: rotate(-65deg);
+
+    opacity: 0.5;
+
+   }
+
+   &--cencer_end {
+    width: 169.97px;
+    height: 167.07px;
+    top: auto;
+    bottom: 40%;
+    left: auto;
+    right: 10%;
+    z-index: 2;
+
+    -webkit-filter: none;
+    filter: none;
+
+    mix-blend-mode: overlay;
+
+   }
+
+   &--pisces_end {
+    width: 238px;
+    height: 351.9px;
+    top: -10%;
+    bottom: auto;
+    left: auto;
+    right: 20%;
+    z-index: 2;
+
+    
+    -webkit-filter: none;
+    filter: none;
+
+    mix-blend-mode: overlay;
+
+   }
+
+   &--virgo_end {
+    width: 178.13px;
+    height: 349.18px;
+    top: 15%;
+    bottom: auto;
+    left: 15%;
+    right: auto;
+    z-index: 2;
+    
+    -webkit-filter: none;
+    filter: none;
+
+    mix-blend-mode: overlay;
+
+   }
+
+}

@@ -1,0 +1,200 @@
+.analysis {
+  position: relative;
+  padding: 145px 0 130px;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 1610px;
+    top: -381px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background: transparent;
+    background: linear-gradient(180deg, rgba(49, 36, 56, 0) 0%, #312438 24.07%, #312438 82.2%, rgba(49, 36, 56, 0) 100%);
+  }
+
+  &::after {
+    display: none;
+    content: '';
+    position: absolute;
+    height: 1402px;
+    bottom: -23%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-image: url('/assets/img/analysis/wind-analysis.png');
+
+    mix-blend-mode: overlay;
+  }
+
+  @media ($m-s) {
+    padding: 195px 0 130px;
+
+    &::before {
+      content: '';
+      height: 1610px;
+      top: -374px;
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    position: absolute;
+    height: 1402px;
+    bottom: -35%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-image: url('/assets/img/analysis/wind-analysis.png');
+
+    mix-blend-mode: overlay;
+  }
+
+}
+
+  @media ($m-m) {
+    padding: 220px 0 200px;
+
+    &::before {
+      content: '';
+      height: 2200px;
+      top: -520px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 1402px;
+    bottom: -30%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-image: url('/assets/img/analysis/wind-analysis.png');
+
+    mix-blend-mode: overlay;
+  }
+}
+@media ($m-xl) {
+  &::after {
+    content: '';
+    position: absolute;
+    height: 1402px;
+    bottom: -23%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-image: url('/assets/img/analysis/wind-analysis.png');
+    background-size: cover;
+
+    mix-blend-mode: overlay;
+  }
+}
+
+}
+
+.analysis__inner {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media ($m-s) {
+    flex-wrap: nowrap;
+  }
+}
+
+.analysis__info {
+  max-width: 100%;
+  z-index: 2;
+  text-align: center;
+
+  @media ($m-m) {
+    max-width: 50%;
+    text-align: left;
+  }
+}
+
+.analysis__info-title {
+  font-size: 40px;
+  line-height: 90%;
+  padding-bottom: 25px;
+
+  font-family: 'P22 Underground CY Pro';
+  font-weight: 800;
+  color: $c-white;
+
+  @media ($m-l) {
+    font-size: 80px;
+    padding-bottom: 49px;
+  }
+}
+
+.analysis__info-subtitle {
+  font-family: 'P22 Underground CY Pro';
+  font-size: 20px;
+  font-weight: 200;
+  color: $c-white;
+
+  @media ($m-s) {
+    font-size: 24px;
+  }
+}
+
+.analysis__num {
+  padding-top: 35px;
+  z-index: 2;
+  color: $c-white;
+
+  @media ($m-l) {
+    padding-left: 50px;
+    padding-top: 0;
+  }
+}
+
+.label {
+  font-family: 'P22 Underground CY Pro';
+  font-weight: 300;
+  font-size: 20px;
+  padding-left: 16px; 
+
+  &--down {
+    padding-top: 7px;
+  }
+
+  @media ($m-m) {
+    padding-left: 25px;
+
+    &--down {
+      padding-top: 15px;
+    }
+  }
+
+  @media ($m-l) {
+    padding-left: 35px;
+
+    &--down {
+      padding-top: 20px;
+    }
+  }
+}
+
+.num {
+  font-family: 'Gotham Pro';
+  font-weight: 700;
+  font-size: 230px;
+  line-height: 0.720em;
+  color: #6A507B;
+
+  @media ($m-m) {
+    font-size: 375px;
+  }
+
+  @media ($m-l) {
+    font-size: 500px;
+  }
+}

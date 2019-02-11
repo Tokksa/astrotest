@@ -1,0 +1,3319 @@
+@import "../vars";
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('/fonts/portfolio/astro/GothamPro/GothamPro-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: bold;
+  }
+  
+  @font-face {
+    font-family: 'P22 Underground CY Pro';
+    src: url('/fonts/portfolio/astro/P22UndergroundCYPro-Book/P22UndergroundCYPro-Light.woff') format('woff');
+    font-weight: 200;
+    font-style: lighter;
+  }
+  
+  @font-face {
+    font-family: 'P22 Underground CY Pro';
+    src: url('/fonts/portfolio/astro/P22UndergroundCYPro-Book/P22UndergroundCYPro-Book.woff') format('woff');
+    font-weight: 300;
+  }
+  
+  @font-face {
+    font-family: 'P22 Underground CY Pro';
+    src: url('/fonts/portfolio/astro/P22UndergroundCYPro-Book/P22UndergroundCYPro-Heavy.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'MinionPro';
+    src: url('/fonts/portfolio/astro/MinionPro-Bold/MinionPro-It.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'MinionPro';
+    src: url('/fonts/portfolio/astro/MinionPro-Bold/MinionPro-Regular.otf') format('otf');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .astro {
+    background-color: #312438;
+  }
+
+  .astro-head {
+    position: relative;
+    padding-top: 100px;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      height: 2160px;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      background: transparent;
+      background: linear-gradient(36.68deg, #6A507B 69.92%, #C7A378 88.71%);
+    }
+  
+    &::after {
+      display: none;
+      content: '';
+      position: absolute;
+      height: 2160px;
+      top: -5%;
+      left: -90%;
+      right: 0;
+      z-index: 2;
+      background: transparent;
+      background: radial-gradient(990.00px at 50.5% 50%, #FFFFFF 0%, #E6E6E6 7.07%, #CCCCCC 16.16%, #B3B3B3 26.26%, #999999 36.36%, #666666 46.46%, #333333 57.58%, transparent 69.7%, transparent 82.83%, transparent 100%);
+    
+      opacity: 0.3;
+    }
+    
+    @media ($m-s) {
+  
+      &::after {
+        display: block;
+        content: '';
+        position: absolute;
+        height: 2160px;
+        top: -170%;
+        left: -140%;
+        right: 0;
+        z-index: 2;
+        background: transparent;
+        background: radial-gradient(990.00px at 50.5% 50%, #FFFFFF 0%, #E6E6E6 7.07%, #CCCCCC 16.16%, #B3B3B3 26.26%, #999999 36.36%, #666666 46.46%, #333333 57.58%, transparent 69.7%, transparent 82.83%, transparent 100%);
+      
+        opacity: 0.3;
+      }
+    }
+  
+    @media ($m-m) {
+  
+      &::after {
+        content: '';
+        position: absolute;
+        height: 2160px;
+        top: -95%;
+        left: -145%;
+        right: 0;
+        z-index: 2;
+        background: transparent;
+        background: radial-gradient(990.00px at 50.5% 50%, #FFFFFF 0%, #E6E6E6 7.07%, #CCCCCC 16.16%, #B3B3B3 26.26%, #999999 36.36%, #666666 46.46%, #333333 57.58%, transparent 69.7%, transparent 82.83%, transparent 100%);
+      
+        opacity: 0.3;
+      }
+    }
+  
+    @media ($m-l) {
+  
+      &::after {
+        content: '';
+        position: absolute;
+        height: 2160px;
+        top: -50%;
+        left: -120%;
+        right: 0;
+        z-index: 2;
+        background: transparent;
+        background: radial-gradient(990.00px at 50.5% 50%, #FFFFFF 0%, #E6E6E6 7.07%, #CCCCCC 16.16%, #B3B3B3 26.26%, #999999 36.36%, #666666 46.46%, #333333 57.58%, transparent 69.7%, transparent 82.83%, transparent 100%);
+      
+        opacity: 0.3;
+      }
+    }
+  
+    @media ($m-xl) {
+  
+      &::after {
+        content: '';
+        position: absolute;
+        height: 2160px;
+        top: -5%;
+        left: -90%;
+        right: 0;
+        z-index: 2;
+        background: transparent;
+        background: radial-gradient(990.00px at 50.5% 50%, #FFFFFF 0%, #E6E6E6 7.07%, #CCCCCC 16.16%, #B3B3B3 26.26%, #999999 36.36%, #666666 46.46%, #333333 57.58%, transparent 69.7%, transparent 82.83%, transparent 100%);
+      
+        opacity: 0.3;
+      }
+    }
+  }
+  
+  .astro-head__bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    &--stars {
+      z-index: 2;
+      background-image: url('/img/portfolio/astro/head/stars.png')
+    }
+  
+    @media ($m-s) {
+  
+      top: 100px;
+  }
+    @media ($m-xl) {
+  
+      top: 0;
+  
+      &--stars {
+        z-index: 1;
+      }
+  }
+  }
+  
+  .astro-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+  
+  .astro-head__inner {
+    padding: 115px 0 30px;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      height: 1402px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      background-image: url('/img/portfolio/astro/head/wind.png');
+  
+      mix-blend-mode: overlay;
+    }
+  
+    @media ($m-m) {
+      padding: 115px 0 70px;
+  }
+  
+    @media ($m-l) {
+      padding: 115px 0 300px;
+  }
+  
+    @media ($m-xl) {
+      padding: 295px 0 460px;
+  }
+  
+  }
+
+  .astro-analysis {
+    position: relative;
+    padding: 145px 0 130px;
+    z-index: 1;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      height: 1610px;
+      top: -381px;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      background: transparent;
+      background: linear-gradient(180deg, rgba(49, 36, 56, 0) 0%, #312438 24.07%, #312438 82.2%, rgba(49, 36, 56, 0) 100%);
+    }
+  
+    &::after {
+      display: none;
+      content: '';
+      position: absolute;
+      height: 1402px;
+      bottom: -23%;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      background-repeat: no-repeat;
+      background-image: url('/img/portfolio/astro/analysis/wind-analysis.png');
+  
+      mix-blend-mode: overlay;
+    }
+  
+    @media ($m-s) {
+      padding: 195px 0 130px;
+  
+      &::before {
+        content: '';
+        height: 1610px;
+        top: -374px;
+    }
+  
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      height: 1402px;
+      bottom: -35%;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      background-repeat: no-repeat;
+      background-image: url('/img/portfolio/astro/analysis/wind-analysis.png');
+  
+      mix-blend-mode: overlay;
+    }
+  
+  }
+  
+    @media ($m-m) {
+      padding: 220px 0 200px;
+  
+      &::before {
+        content: '';
+        height: 2200px;
+        top: -520px;
+    }
+  
+    &::after {
+      content: '';
+      position: absolute;
+      height: 1402px;
+      bottom: -30%;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      background-repeat: no-repeat;
+      background-image: url('/img/portfolio/astro/analysis/wind-analysis.png');
+  
+      mix-blend-mode: overlay;
+    }
+  }
+  @media ($m-xl) {
+    &::after {
+      content: '';
+      position: absolute;
+      height: 1402px;
+      bottom: -23%;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      background-repeat: no-repeat;
+      background-image: url('/img/portfolio/astro/analysis/wind-analysis.png');
+      background-size: cover;
+  
+      mix-blend-mode: overlay;
+    }
+  }
+  
+  }
+  
+  .astro-analysis__inner {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  
+    @media ($m-s) {
+      flex-wrap: nowrap;
+    }
+  }
+  
+  .astro-analysis__info {
+    max-width: 100%;
+    z-index: 2;
+    text-align: center;
+  
+    @media ($m-m) {
+      max-width: 50%;
+      text-align: left;
+    }
+  }
+  
+  .astro-analysis__info-title {
+    font-size: 40px;
+    line-height: 90%;
+    padding-bottom: 25px;
+  
+    font-family: 'P22 Underground CY Pro';
+    font-weight: 800;
+    color: $c-white;
+  
+    @media ($m-l) {
+      font-size: 80px;
+      padding-bottom: 49px;
+    }
+  }
+  
+  .astro-analysis__info-subtitle {
+    font-family: 'P22 Underground CY Pro';
+    font-size: 20px;
+    font-weight: 200;
+    color: $c-white;
+  
+    @media ($m-s) {
+      font-size: 24px;
+    }
+  }
+  
+  .astro-analysis__num {
+    padding-top: 35px;
+    z-index: 2;
+    color: $c-white;
+  
+    @media ($m-l) {
+      padding-left: 50px;
+      padding-top: 0;
+    }
+  }
+  
+  .astro-label {
+    font-family: 'P22 Underground CY Pro';
+    font-weight: 300;
+    font-size: 20px;
+    padding-left: 16px; 
+  
+    &--down {
+      padding-top: 7px;
+    }
+  
+    @media ($m-m) {
+      padding-left: 25px;
+  
+      &--down {
+        padding-top: 15px;
+      }
+    }
+  
+    @media ($m-l) {
+      padding-left: 35px;
+  
+      &--down {
+        padding-top: 20px;
+      }
+    }
+  }
+  
+  .astro-num {
+    font-family: 'Gotham Pro';
+    font-weight: 700;
+    font-size: 230px;
+    line-height: 0.720em;
+    color: #6A507B;
+  
+    @media ($m-m) {
+      font-size: 375px;
+    }
+  
+    @media ($m-l) {
+      font-size: 500px;
+    }
+  }
+
+  .astro-block {
+    position: relative;
+  
+    &--home {
+      padding-top: 0;
+      padding-bottom: 60px;
+      z-index: 3;
+  
+      &::before {
+        content: '';
+        position: absolute;
+        height: 1200px;
+        top: -390px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        background: transparent;
+        background: linear-gradient(180deg, rgba(49, 36, 56, 0) 0%, #312438 29.73%, #312438 82.2%, rgba(49, 36, 56, 0) 100%);
+      }
+    }
+  
+    &--concept {
+      padding-bottom: 60px;
+      z-index: 3;
+  
+      &::after {
+        content: '';
+        position: absolute;
+        height: 800px;
+        bottom: -140%;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        background: transparent;
+        background: linear-gradient(180deg, #312438 0%, #312438 21.21%, rgba(49, 36, 56, 0) 61.73%);
+      }
+    }
+  
+    &--modules {
+      
+      
+      &::before {
+        content: '';
+        position: absolute;
+        height: 60%;
+        width: 200%;
+        bottom: -25px;
+        left: -50%;
+        right: -50%;
+        z-index: 1;
+        background: transparent;
+        background: radial-gradient(837.24px at 50% 30.47%, #C7A378 0%, #6A507B 100%);
+      }
+      
+      &::after {
+        content: '';
+        position: absolute;
+        height: 700px;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        background-image: url('/img/portfolio/astro/modul/bg/grid.png');
+        background-position: center;
+        background-size: cover;
+        
+        opacity: 0.3;
+      }
+      
+    }
+    
+    &--lavels {
+      padding-bottom: 20px;
+      z-index: 3;
+  
+      &::before {
+        content: '';
+        position: absolute;
+        height: 1402px;
+        top: -15%;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        background: transparent;
+        background: linear-gradient(180deg, rgba(49, 36, 56, 0) 0%, #312438 24.07%, #312438 82.2%, rgba(49, 36, 56, 0) 100%);
+  
+        transform: rotate(180deg);
+      }
+  
+      &::after {
+        content: '';
+        position: absolute;
+        height: 2280px;
+        width: auto;
+        bottom: -100px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        background-image: url('/img/portfolio/astro/lavels/bg/stars.png');
+  
+        opacity: 0.5;
+      }
+  
+  
+    }
+  
+    &--pages {
+      
+      padding-bottom: 750px;
+  
+      &::after {
+        content: '';
+        position: absolute;
+        height: 700px;
+        bottom: 635px;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        background: linear-gradient(to bottom, transparent, #312438 86%, transparent);
+      }
+  
+    }
+  
+    &--uikit {
+      padding-bottom: 140px;
+  
+      &::before {
+        content: '';
+        position: absolute;
+        height: 2200px;
+        bottom: 100px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        background-image: url('/img/portfolio/astro/uikit/bg/stars-ui.png');
+  
+        opacity: 0.5;
+      }
+  
+      &::after {
+        content: '';
+        position: absolute;
+        height: 1000px;
+        bottom: -60px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        background: linear-gradient(180deg, rgba(164, 106, 49, 0) 0%, rgba(164, 106, 49, 0.91) 40.36%, #A46A31 53.97%, rgba(164, 106, 49, 0.67) 70.44%, rgba(49, 36, 56, 0) 100%);
+      }
+  
+    }
+  
+    &--adaptive {
+      padding-bottom: 70px;
+  
+      &::before {
+        content: '';
+        position: absolute;
+        height: 1920px;
+        bottom: -540px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        background-image: url('/img/portfolio/astro/adaptive/bg/stars-adaptiv.png');
+  
+        opacity: 0.5;
+      }
+    }
+  
+    &--working {
+      padding-bottom: 60px;
+  
+      &::before {
+        content: '';
+        position: absolute;
+        height: 775px;
+        bottom: -90%;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        background-image: url('/img/portfolio/astro/head/wind.png');  
+  
+        mix-blend-mode: overlay;
+      }
+  
+      &::after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 125px;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        z-index: 2;
+        background: transparent;
+        background: linear-gradient(180deg, rgba(49, 36, 56, 0) 0%, #312438 21.59%, #312438 29.34%, rgba(49, 36, 56, 0) 63.55%);
+      }
+    }
+  
+    &--end {
+  
+  
+      &::before {
+        content: '';
+        position: absolute;
+        height: 500px;
+        bottom: -45px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        background-image: url('/img/portfolio/astro/end/bg/stars-end.png');
+  
+      }
+  
+      &::after {
+        content: '';
+        position: absolute;
+        height: 775px;
+        bottom: -115px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        background: linear-gradient(31.47deg, #6A507B 69.92%, #C7A378 88.71%);
+      }
+    }
+  
+    @media ($m-s) {
+  
+      &--home {
+        padding-top: 0;
+        padding-bottom: 60px;
+        z-index: 3;
+    
+        &::before {
+          content: '';
+          position: absolute;
+          height: 1200px;
+          top: -225px;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background: transparent;
+          background: linear-gradient(180deg, rgba(49, 36, 56, 0) 0%, #312438 29.73%, #312438 82.2%, rgba(49, 36, 56, 0) 100%);
+        }
+      }
+    
+      &--concept {
+        padding-bottom: 60px;
+        z-index: 3;
+    
+        &::after {
+          content: '';
+          position: absolute;
+          height: 800px;
+          bottom: -102%;
+          left: 0;
+          right: 0;
+          z-index: 1;
+          background: transparent;
+          background: linear-gradient(180deg, #312438 0%, #312438 21.21%, rgba(49, 36, 56, 0) 61.73%);
+        }
+      }
+    
+      &--modules {
+        
+        
+        &::before {
+          content: '';
+          position: absolute;
+          height: 60%;
+          width: 200%;
+          bottom: 60px;
+          left: -50%;
+          right: -50%;
+          z-index: 1;
+          background: transparent;
+          background: radial-gradient(837.24px at 50% 30.47%, #C7A378 0%, #6A507B 100%);
+        }
+        
+        &::after {
+          content: '';
+          position: absolute;
+          height: 700px;
+          top: 175px;
+          left: 0;
+          right: 0;
+          z-index: 3;
+          background-image: url('/img/portfolio/astro/modul/bg/grid.png');
+          background-position: center;
+          background-size: cover;
+          
+          opacity: 0.3;
+        }
+        
+      }
+      
+      &--lavels {
+        padding-bottom: 20px;
+        z-index: 3;
+    
+        &::before {
+          content: '';
+          position: absolute;
+          height: 1402px;
+          top: -23%;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background: transparent;
+          background: linear-gradient(180deg, rgba(49, 36, 56, 0) 0%, #312438 24.07%, #312438 82.2%, rgba(49, 36, 56, 0) 100%);
+    
+          transform: rotate(180deg);
+        }
+    
+        &::after {
+          content: '';
+          position: absolute;
+          height: 2280px;
+          width: auto;
+          bottom: -100px;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background-image: url('/img/portfolio/astro/lavels/bg/stars.png');
+    
+          opacity: 0.5;
+        }
+    
+    
+      }
+    
+      &--pages {
+        
+        padding-bottom: 335px;
+    
+        &::after {
+          content: '';
+          position: absolute;
+          height: 700px;
+          bottom: 220px;
+          left: 0;
+          right: 0;
+          z-index: 3;
+          background: linear-gradient(to bottom, transparent, #312438 86%, transparent);
+        }
+    
+      }
+    
+      &--uikit {
+        padding-bottom: 140px;
+    
+        &::before {
+          content: '';
+          position: absolute;
+          height: 700px;
+          bottom: 550px;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background-image: url('/img/portfolio/astro/uikit/bg/stars-ui.png');
+    
+          opacity: 0.5;
+        }
+    
+        &::after {
+          content: '';
+          position: absolute;
+          height: 1000px;
+          bottom: -365px;
+          left: 0;
+          right: 0;
+          z-index: 1;
+          background: linear-gradient(180deg, rgba(164, 106, 49, 0) 0%, rgba(164, 106, 49, 0.91) 40.36%, #A46A31 53.97%, rgba(164, 106, 49, 0.67) 70.44%, rgba(49, 36, 56, 0) 100%);
+        }
+    
+      }
+    
+      &--adaptive {
+        padding-bottom: 70px;
+    
+        &::before {
+          content: '';
+          position: absolute;
+          height: 1920px;
+          bottom: -540px;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background-image: url('/img/portfolio/astro/adaptive/bg/stars-adaptiv.png');
+    
+          opacity: 0.5;
+        }
+      }
+    
+      &--working {
+        padding-bottom: 60px;
+    
+        &::before {
+          content: '';
+          position: absolute;
+          height: 775px;
+          bottom: -70%;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background-image: url('/img/portfolio/astro/head/wind.png');  
+        }
+    
+        &::after {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 220px;
+          bottom: auto;
+          left: auto;
+          right: auto;
+          z-index: 2;
+          background: transparent;
+          background: linear-gradient(180deg, rgba(49, 36, 56, 0) 0%, #312438 21.59%, #312438 29.34%, rgba(49, 36, 56, 0) 63.55%);
+        }
+      }
+    
+      &--end {
+    
+    
+        &::before {
+          content: '';
+          position: absolute;
+          height: 500px;
+          bottom: 70px;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background-image: url('/img/portfolio/astro/end/bg/stars-end.png');
+    
+        }
+    
+        &::after {
+          content: '';
+          position: absolute;
+          height: 775px;
+          bottom: -105px;
+          left: 0;
+          right: 0;
+          z-index: 1;
+          background: linear-gradient(31.47deg, #6A507B 69.92%, #C7A378 88.71%);
+        }
+      }
+    }
+  
+    @media ($m-m) {
+  
+      &--home {
+        padding-top: 0;
+        padding-bottom: 60px;
+        z-index: 3;
+    
+        &::before {
+          content: '';
+          position: absolute;
+          height: 1200px;
+          top: -225px;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background: transparent;
+          background: linear-gradient(180deg, rgba(49, 36, 56, 0) 0%, #312438 29.73%, #312438 82.2%, rgba(49, 36, 56, 0) 100%);
+        }
+      }
+    
+      &--concept {
+        padding-bottom: 60px;
+        z-index: 3;
+    
+        &::after {
+          content: '';
+          position: absolute;
+          height: 800px;
+          bottom: -70%;
+          left: 0;
+          right: 0;
+          z-index: 1;
+          background: transparent;
+          background: linear-gradient(180deg, #312438 0%, #312438 21.21%, rgba(49, 36, 56, 0) 61.73%);
+        }
+      }
+    
+      &--modules {
+        
+        
+        &::before {
+          content: '';
+          position: absolute;
+          height: 60%;
+          width: 200%;
+          bottom: 160px;
+          left: -50%;
+          right: -50%;
+          z-index: 1;
+          background: transparent;
+          background: radial-gradient(837.24px at 50% 30.47%, #C7A378 0%, #6A507B 100%);
+        }
+        
+        &::after {
+          content: '';
+          position: absolute;
+          height: 700px;
+          top: 175px;
+          left: 0;
+          right: 0;
+          z-index: 3;
+          background-image: url('/img/portfolio/astro/modul/bg/grid.png');
+          background-position: center;
+          background-size: cover;
+          
+          opacity: 0.3;
+        }
+        
+      }
+      
+      &--lavels {
+        padding-bottom: 100px;
+        z-index: 3;
+    
+        &::before {
+          content: '';
+          position: absolute;
+          height: 1402px;
+          top: -23%;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background: transparent;
+          background: linear-gradient(180deg, rgba(49, 36, 56, 0) 0%, #312438 24.07%, #312438 82.2%, rgba(49, 36, 56, 0) 100%);
+    
+          transform: rotate(180deg);
+        }
+    
+        &::after {
+          content: '';
+          position: absolute;
+          height: 2280px;
+          width: auto;
+          bottom: -100px;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background-image: url('/img/portfolio/astro/lavels/bg/stars.png');
+    
+          opacity: 0.5;
+        }
+    
+    
+      }
+    
+      &--pages {
+        
+        padding-bottom: 660px;
+    
+        &::after {
+          content: '';
+          position: absolute;
+          height: 1700px;
+          bottom: 420px;
+          left: 0;
+          right: 0;
+          z-index: 3;
+          background: linear-gradient(to bottom, transparent, #312438 86%, transparent);
+        }
+    
+      }
+    
+      &--uikit {
+        padding-bottom: 75px;
+    
+        &::before {
+          content: '';
+          position: absolute;
+          height: 700px;
+          bottom: 550px;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background-image: url('/img/portfolio/astro/uikit/bg/stars-ui.png');
+    
+          opacity: 0.5;
+        }
+    
+        &::after {
+          content: '';
+          position: absolute;
+          height: 1000px;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: 1;
+          background: linear-gradient(180deg, rgba(164, 106, 49, 0) 0%, rgba(164, 106, 49, 0.91) 40.36%, #A46A31 53.97%, rgba(164, 106, 49, 0.67) 70.44%, rgba(49, 36, 56, 0) 100%);
+        }
+    
+      }
+    
+      &--adaptive {
+        padding-bottom: 70px;
+    
+        &::before {
+          content: '';
+          position: absolute;
+          height: 1920px;
+          bottom: -540px;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background-image: url('/img/portfolio/astro/adaptive/bg/stars-adaptiv.png');
+    
+          opacity: 0.5;
+        }
+      }
+    
+      &--working {
+        padding-bottom: 60px;
+    
+        &::before {
+          content: '';
+          position: absolute;
+          height: 1000px;
+          bottom: -61%;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background-image: url('/img/portfolio/astro/head/wind.png');  
+        }
+    
+        &::after {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 530px;
+          bottom: auto;
+          left: auto;
+          right: auto;
+          z-index: 2;
+          background: transparent;
+          background: linear-gradient(180deg, rgba(49, 36, 56, 0) 0%, #312438 21.59%, #312438 29.34%, rgba(49, 36, 56, 0) 63.55%);
+        }
+      }
+    
+      &--end {
+    
+    
+        &::before {
+          content: '';
+          position: absolute;
+          height: 1000px;
+          bottom: 145px;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background-image: url('/img/portfolio/astro/end/bg/stars-end.png');
+    
+        }
+    
+        &::after {
+          content: '';
+          position: absolute;
+          height: 1000px;
+          bottom: 0px;
+          left: 0;
+          right: 0;
+          z-index: 1;
+          background: linear-gradient(31.47deg, #6A507B 69.92%, #C7A378 88.71%);
+        }
+      }
+    }
+  
+    @media ($m-l) {
+      
+      &--concept {
+    
+        &::after {
+          content: '';
+          position: absolute;
+          height: 1402px;
+          bottom: -90%;
+  
+        }
+      }
+    
+      &--modules {
+        
+        
+        &::before {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 200%;
+          bottom: -255px;
+        }
+        
+        &::after {
+          content: '';
+          position: absolute;
+          height: 2000px;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 3;
+          background-image: url('/img/portfolio/astro/modul/bg/grid.png');
+          background-position: center;
+          background-size: cover;
+          
+          opacity: 0.3;
+        }
+        
+      }
+      
+      &--lavels {
+        padding-bottom: 100px;
+        z-index: 3;
+    
+        &::before {
+          content: '';
+          position: absolute;
+          height: 1402px;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background: transparent;
+          background: linear-gradient(180deg, rgba(49, 36, 56, 0) 0%, #312438 24.07%, #312438 82.2%, rgba(49, 36, 56, 0) 100%);
+    
+          transform: rotate(180deg);
+        }
+      }
+  
+      &--working {
+        padding-bottom: 60px;
+    
+        &::before {
+          content: '';
+          position: absolute;
+          height: 1200px;
+          bottom: -56%;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background-image: url('/img/portfolio/astro/head/wind.png');  
+        }
+    
+        &::after {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 630px;
+          bottom: auto;
+          left: auto;
+          right: auto;
+          z-index: 2;
+          background: transparent;
+          background: linear-gradient(180deg, rgba(49, 36, 56, 0) 0%, #312438 21.59%, #312438 29.34%, rgba(49, 36, 56, 0) 63.55%);
+        }
+      }
+    }
+    @media ($m-xl) {
+      &--home {
+        padding-top: 70px;
+        padding-bottom: 150px;
+        z-index: 3;
+    
+        &::before {
+          content: '';
+          position: absolute;
+          height: 2000px;
+          top: -460px;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background: transparent;
+          background: linear-gradient(180deg, rgba(49, 36, 56, 0) 0%, #312438 29.73%, #312438 82.2%, rgba(49, 36, 56, 0) 100%);
+        }
+      }
+    
+      &--concept {
+        padding-bottom: 150px;
+        z-index: 3;
+    
+        &::after {
+          content: '';
+          position: absolute;
+          height: 1402px;
+          bottom: -80%;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background: transparent;
+          background: linear-gradient(180deg, #312438 0%, #312438 21.21%, rgba(49, 36, 56, 0) 61.73%);
+        }
+      }
+    
+      &--modules {
+        
+        
+        &::before {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 200%;
+          bottom: -250px;
+          left: -50%;
+          right: -50%;
+          z-index: 1;
+          background: transparent;
+          background: radial-gradient(837.24px at 50% 30.47%, #C7A378 0%, #6A507B 100%);
+        }
+        
+        &::after {
+          content: '';
+          position: absolute;
+          height: 2000px;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background-image: url('/img/portfolio/astro/modul/bg/grid.png');
+          background-position: center;
+          background-size: cover;
+          
+          opacity: 0.3;
+        }
+        
+      }
+      
+      &--lavels {
+        padding-bottom: 150px;
+        z-index: 3;
+    
+        &::before {
+          content: '';
+          position: absolute;
+          height: 1402px;
+          top: -30%;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background: transparent;
+          background: linear-gradient(180deg, rgba(49, 36, 56, 0) 0%, #312438 24.07%, #312438 82.2%, rgba(49, 36, 56, 0) 100%);
+    
+          transform: rotate(180deg);
+        }
+    
+        &::after {
+          content: '';
+          position: absolute;
+          height: 2280px;
+          width: auto;
+          bottom: -100px;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background-image: url('/img/portfolio/astro/lavels/bg/stars.png');
+    
+          opacity: 0.5;
+        }
+    
+    
+      }
+    
+      &--pages {
+        
+        padding-bottom: 700px;
+    
+        &::after {
+          content: '';
+          position: absolute;
+          height: 2000px;
+          bottom: 400px;
+          left: 0;
+          right: 0;
+          z-index: 3;
+          background: linear-gradient(to bottom, transparent, #312438 86%, transparent);
+        }
+    
+      }
+    
+      &--uikit {
+        padding-bottom: 420px;
+    
+        &::before {
+          content: '';
+          position: absolute;
+          height: 2200px;
+          bottom: 100px;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background-image: url('/img/portfolio/astro/uikit/bg/stars-ui.png');
+    
+          opacity: 0.5;
+  
+          mix-blend-mode: overlay;
+        }
+    
+        &::after {
+          content: '';
+          position: absolute;
+          height: 1997px;
+          bottom: -290px;
+          left: 0;
+          right: 0;
+          z-index: 1;
+          background: linear-gradient(180deg, rgba(164, 106, 49, 0) 0%, rgba(164, 106, 49, 0.91) 40.36%, #A46A31 53.97%, rgba(164, 106, 49, 0.67) 70.44%, rgba(49, 36, 56, 0) 100%);
+        }
+    
+      }
+    
+      &--adaptive {
+        padding-bottom: 150px;
+    
+        &::before {
+          content: '';
+          position: absolute;
+          height: 1920px;
+          bottom: -540px;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background-image: url('/img/portfolio/astro/adaptive/bg/stars-adaptiv.png');
+    
+          opacity: 0.5;
+        }
+      }
+    
+      &--working {
+        padding-bottom: 150px;
+    
+        &::before {
+          content: '';
+          position: absolute;
+          height: 1775px;
+          bottom: -90%;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background-image: url('/img/portfolio/astro/head/wind.png');  
+        }
+    
+        &::after {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 490px;
+          bottom: auto;
+          left: auto;
+          right: auto;
+          z-index: 2;
+          background: transparent;
+          background: linear-gradient(180deg, rgba(49, 36, 56, 0) 0%, #312438 21.59%, #312438 29.34%, rgba(49, 36, 56, 0) 63.55%);
+        }
+      }
+    
+      &--end {
+    
+    
+        &::before {
+          content: '';
+          position: absolute;
+          height: 1920px;
+          bottom: -45px;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          background-image: url('/img/portfolio/astro/end/bg/stars-end.png');
+  
+          mix-blend-mode: overlay;
+    
+        }
+    
+        &::after {
+          content: '';
+          position: absolute;
+          height: 1670px;
+          bottom: 0px;
+          left: 0;
+          right: 0;
+          z-index: 1;
+          background: linear-gradient(31.47deg, #6A507B 69.92%, #C7A378 88.71%);
+        }
+      }
+    }
+  }
+  
+  
+  .astro-block__content {
+    display: block;
+    position: relative;
+    z-index: 4;
+  }
+  
+  .astro-block__pages-absolute {
+    position: absolute;
+    bottom: 300px;
+    left: 0;
+    right: 0;
+    height: 100%;
+  
+    @media ($m-m) {
+      bottom: 550px;
+    }
+  }
+  
+  .astro-block__info {
+    position: relative;
+    max-width: 100%;
+    margin-bottom: 55px;
+    z-index: 3;
+    text-align: center;
+  
+    &--nomr {
+      margin-bottom: 0;
+    }
+  
+    @media ($m-m) {
+      max-width: 50%;
+      margin-bottom: 150px;
+      text-align: left;
+    
+      &--nomr {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  .astro-block__info-title {
+    font-size: 40px;
+    line-height: 90%;
+    padding-bottom: 25px;
+  
+    font-family: 'P22 Underground CY Pro';
+    font-weight: 800;
+    color: $c-white;
+  
+    @media ($m-m) {
+      font-size: 80px;
+      line-height: 90%;
+      padding-bottom: 49px;
+  
+    }
+  }
+  
+  .astro-block__info-subtitle {
+    font-family: 'P22 Underground CY Pro';
+    font-size: 20px;
+    font-weight: 200;
+    color: $c-white;
+  
+    @media ($m-m) {
+      font-size: 24px;
+  
+    }
+  }
+  
+  .astro-block__pic {
+  
+  
+    & > img {
+      width: 100%
+    }
+  
+  }
+  
+  .astro-block__bg {
+  
+    &--wind {
+  
+        position: absolute;
+        height: 1650px;
+        width: 100%;
+        bottom: -23%;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        background-repeat: no-repeat;
+        background-image: url('/img/portfolio/astro/modul/bg/wind-modul.png');
+        background-size: cover;
+    
+        mix-blend-mode: overlay;
+    }
+  }
+
+  .astro-block-pics {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media ($m-s) {
+        flex-wrap: nowrap;
+    }
+}
+
+.astro-block-pic {
+
+    &--left {
+        position: relative;
+        width: 100%;
+    }
+
+    &--right {
+        align-self: center;
+        padding-left: 40px;
+        padding-bottom: 15px;
+
+        & > img {
+            width: 85%;
+        }
+    }
+
+    &--rightalt {
+        align-self: center;
+    }
+
+    &--phone {
+        width: 500px;
+        height: 470px;
+    }
+
+    @media ($m-s) {
+    
+        &--left {
+            padding-left: 20px;
+
+        }
+
+        &--right {
+            align-self: flex-end;
+            padding-left: 80px;
+            padding-bottom: 15px;
+
+            & > img {
+                width: 100%;
+            }
+        }
+    
+        &--rightalt {
+            align-self: center;
+        }
+    
+        &--phone {
+            width: 500px;
+            height: 450px;
+        }
+    }
+
+    @media ($m-m) {
+
+        &--phone {
+            width: 500px;
+            height: 550px;
+        }
+
+    }
+
+    @media ($m-l) {
+
+        &--left {
+            padding-left: 0;
+
+        }
+
+        &--right {
+            align-self: flex-end;
+            padding-left: 80px;
+            padding-bottom: 15px;
+
+            & > img {
+                width: 100%;
+            }
+        }
+    
+        &--rightalt {
+            align-self: center;
+        }
+    
+        &--phone {
+            width: 500px;
+            height: 800px;
+        }
+    }
+}
+
+.astro-block-pic__absolute {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    @media ($m-m) {
+        left: -60px;
+    }
+
+    @media ($m-l) {
+        left: -95px;
+    }
+}
+
+.astro-block-pic__monitor {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.astro-block-pic__shadowmin {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: -5%;
+    width: 100%;
+}
+
+.astro-block-pic__phone {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+}
+
+.astro-block-pic__adaptiv {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    
+
+    @media ($m-xxs) {
+        padding-top: 45px;
+
+    }
+
+    @media ($m-s) {
+        padding-top: 0;
+    }
+}
+
+.astro-block-pic__ellipse {
+    position: absolute;
+    z-index: 2;
+    right: 0%;
+    top: 0%;
+    width: 100%;
+
+    @media ($m-s) {
+        right: -35%;
+        top: -15%;
+        width: auto;
+    }
+
+    @media ($m-m) {
+        right: -5%;
+        top: 15%;
+        width: 100%;
+    }
+
+    @media ($m-xl) {
+        right: 0;
+        top: -15%;
+    }
+}
+
+.astro-color-system {
+
+    display: none;
+
+
+
+    @media ($m-m) {
+        position: relative;
+        display: block;
+        height: 300px;
+        transform: translate3d(0, -2%, 0);
+        z-index: 4;
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 1997px;
+            bottom: -615px;
+            left: 0;
+            right: -73%;
+            z-index: 1;
+            background: transparent;
+            background: radial-gradient(1089.00px at 50.5% 50%, #FF6700 0%, #D45600 7.07%, #A34200 16.16%, transparent 26.26%, transparent 36.36%, transparent 46.46%, transparent 57.58%, transparent 69.7%, transparent 82.83%, transparent 100%);
+          
+            mix-blend-mode: screen;
+
+            opacity: 0.6;
+        }
+    }
+  
+  }
+  
+  
+  .astro-color-system__orbit {
+    position: absolute;
+    top: -30%;
+    right: 12%;
+    width: 55%;
+    transform: translate3d(50%, -50%, 0);
+  
+    &::after {
+        content: '';
+        display: block;
+        padding-top: 100%;
+
+    }
+  
+    &--m {
+        width: 18%;
+    }
+  
+    &--n {
+        width: 35%;
+    }
+  
+    &--l {
+        width: 52%;
+    }
+
+    &--x {
+        width: 75%;
+    }
+
+  }
+  
+  .astro-color-system__orbit-circle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+  
+    &--m {
+        border: 1px solid rgba(191, 138, 64, 0.75);
+
+
+        animation: color-orbit 15s reverse infinite linear;
+    }
+
+    &--n {
+        border: 1px solid rgba(191, 138, 64, 0.65);
+
+
+        animation: color-orbit 20s reverse infinite linear;
+    }
+  
+    &--l {
+        border: 1px solid rgba(191, 138, 64, 0.55);
+
+
+        animation: color-orbit 24s infinite linear;
+    }
+
+    &--x {
+        border: 1px solid rgba(191, 138, 64, 0.35);
+        
+
+        animation: color-orbit 40s infinite linear;
+    }
+  }
+
+  .astro-color-system__group {
+    position: absolute;
+    top: 50%;
+    left: -33px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // width: 145px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        border-radius: 100%;
+        border: 1px solid rgba(191, 138, 64, 0.75);
+        width: 100px;
+        height: 100px;
+        left: -15px;
+    }
+
+    &--two {
+        // top: 5%;
+        // left: 15px;
+        top: 10%;
+        left: 285px;
+    }
+
+    &--three {
+        // top: 5%;
+        // left: 225px;
+        top: 15%;
+        left: 650px;
+    }
+
+    @media ($m-l) {
+
+        position: absolute;
+        top: 50%;
+        left: -33px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // width: 145px;
+    
+        &::after {
+            content: '';
+            position: absolute;
+            border-radius: 100%;
+            border: 1px solid rgba(191, 138, 64, 0.75);
+            width: 100px;
+            height: 100px;
+            left: -15px;
+        }
+    
+        &--two {
+            // top: 5%;
+            // left: 15px;
+            top: -5%;
+            left: 285px;
+        }
+    
+        &--three {
+            // top: 5%;
+            // left: 225px;
+            top: -2%;
+            left: 650px;
+        }
+    }
+
+  }
+  
+  .astro-color-system__planet {
+    // position: absolute;
+    // top: 50%;
+    // left: 0;
+    // width: 25%;
+    // border: 20px solid rgba(255, 255, 255, 0.2);
+    border-radius: 100%;
+    // box-shadow: 0 0 100px rgba(0, 0, 0, .3);
+    // transform: translate3d(-50%, -50%, 0);
+  
+
+
+  
+    &--col-ED {
+        width: 70px;
+        height: 70px;
+        flex-shrink: 0;
+        border: 20px solid rgba(255, 255, 255, 0.2); 
+
+        &::after {
+            content: '';
+            display: block;
+            padding-top: 100%;
+            background: #EDEBE9;
+            border-radius: 100%;
+        }
+    }
+    &--col-3D {
+        width: 70px;
+        height: 70px;
+        flex-shrink: 0;
+        border: 20px solid rgba(255, 255, 255, 0.2); 
+
+        &::after {
+            content: '';
+            display: block;
+            padding-top: 100%;
+            background: #3DBC07;
+            border-radius: 100%;
+        }
+    }
+    &--col-6A {
+        width: 70px;
+        height: 70px;
+        flex-shrink: 0;
+        border: 20px solid rgba(255, 255, 255, 0.2); 
+
+        &::after {
+            content: '';
+            display: block;
+            padding-top: 100%;
+            background: #6A507B;
+            border-radius: 100%;
+        }
+    }
+    &--col-C0 {
+        width: 70px;
+        height: 70px;
+        flex-shrink: 0;
+        border: 20px solid rgba(255, 255, 255, 0.2); 
+
+        &::after {
+            content: '';
+            display: block;
+            padding-top: 100%;
+            background: #C07989;
+            border-radius: 100%;
+        }
+    }
+    &--col-C7 {
+        width: 70px;
+        height: 70px;
+        flex-shrink: 0;
+        border: 20px solid rgba(255, 255, 255, 0.2); 
+
+        &::after {
+            content: '';
+            display: block;
+            padding-top: 100%;
+            background: #C7A378;
+            border-radius: 100%;
+        }
+    }
+    &--col-4E {
+        width: 70px;
+        height: 70px;
+        flex-shrink: 0;
+        border: 20px solid rgba(255, 255, 255, 0.2); 
+
+        &::after {
+            content: '';
+            display: block;
+            padding-top: 100%;
+            background: #4E5258;
+            border-radius: 100%;
+        }
+    }
+  }
+
+  .astro-color-system__title {
+      color: #E4C781;
+      font-size: 20px;
+  }
+  
+  @keyframes color-orbit {
+    0% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+  .astro-intro {
+
+    &--foot {
+    padding: 0px 0 185px;
+    }
+
+    @media ($m-s) {
+
+        &--foot {
+            padding: 0px 0 250px;
+        }
+    }
+
+    @media ($m-m) {
+
+        &--foot {
+            padding: 30px 0 400px;
+        }
+    }
+
+    @media ($m-l) {
+
+        &--foot {
+            padding: 30px 0 434px;
+        }
+    }
+
+    @media ($m-xl) {
+        &--foot {
+        padding: 150px 0 750px;
+        }
+    }
+}
+
+.astro-intro__logo {
+    flex-shrink: 0;
+    z-index: 2;
+    width: 500px;
+    max-width: 100%;
+    margin: 0;
+  
+    & > img {
+      display: block;
+    }
+
+    @media ($m-m) {
+        margin: 0 0 75px 0;
+
+    }
+}
+  
+.astro-intro__slogan {
+    z-index: 2;
+    font-family: 'P22 Underground CY Pro';
+    font-weight: 200;
+    font-size: 15px;
+    color: $c-white;
+    text-align: center;
+
+    @media ($m-m) {
+        font-size: 24px;
+
+    }
+  }
+
+.astro-intro__pic {
+    position: absolute;
+    top: auto;
+    bottom: 0%;
+    left: -5%;
+    right: -5%;
+    z-index: 4;
+    margin: 0 auto;
+
+
+
+    & > img {
+        width: 100%;
+
+    }
+}
+
+.astro-lavel-block {
+    position: relative;
+    display: flex;
+    z-index: 3;
+    justify-content: space-between;
+    height: 1100px;
+    text-align: center;
+
+    @media ($m-s) {
+        text-align: left;
+
+    }
+}
+
+.astro-lavel-block__inner {
+    position: absolute;
+    height: 25%;
+    width: 100%;
+
+
+    &--one {
+        top: -4%;
+        left: 0;
+    }
+
+    &--two {
+        top: 18%;
+    }
+
+    &--three {
+        top: 41%;
+    }
+
+    &--four {
+        top: 67%;
+    }
+
+    @media ($m-s) {
+
+        height: 25%;
+        width: 25%;
+    
+    
+        &--one {
+            top: 0;
+            left: 0;
+        }
+    
+        &--two {
+            top: 20%;
+            left: 20%;
+        }
+    
+        &--three {
+            top: 39%;
+            left: 45%;
+        }
+    
+        &--four {
+            top: 60%;
+            left: 70%;
+        }
+
+    }
+
+    @media ($m-m) {
+
+        &--one {
+            top: -7%;
+            left: 0;
+        }
+    
+        &--two {
+            top: 16%;
+            left: 20%;
+        }
+    
+        &--three {
+            top: 39%;
+            left: 45%;
+        }
+    
+        &--four {
+            top: 62%;
+            left: 70%;
+        }
+
+    }
+    
+    @media ($m-l) {
+
+        height: 25%;
+        width: 25%;
+    
+    
+        &--one {
+            top: 0;
+            left: 0;
+        }
+    
+        &--two {
+            top: 20%;
+            left: 25%;
+        }
+    
+        &--three {
+            top: 39%;
+            left: 50%;
+        }
+    
+        &--four {
+            top: 60%;
+            left: 80%;
+        }
+
+    }
+}
+
+.astro-lavel-block__title {
+    font-family: 'P22 Underground CY Pro';
+    font-size: 17px;
+    font-weight: 300;
+    color: #E4C781;
+
+    @media ($m-s) {
+        font-size: 20px;
+    }
+}
+
+.astro-lavel-block__number {
+    font-family: 'Gotham Pro';
+    font-size: 150px;
+    font-weight: 700;
+    align-content: center;
+    color: #6A507B;
+    opacity: 0.8;
+
+    @media ($m-s) {
+        font-size: 150px;
+    }
+
+    @media ($m-m) {
+        font-size: 200px;
+    }
+}
+
+.astro-lavel-block__subtitle {
+    font-family: 'P22 Underground CY Pro';
+    font-size: 14px;
+    font-weight: 200;
+    color: #ffff;
+
+    @media ($m-s) {
+        font-size: 16px;
+    }
+
+    @media ($m-m) {
+        font-size: 20px;
+    }
+}
+
+.astro-modul-block {
+    position: relative;
+    z-index: 4;
+    height: 275px;
+  
+  
+    @media ($m-s) {
+      height: 480px;
+    }
+  
+    @media ($m-m) {
+      height: 680px;
+    }
+  
+    @media ($m-l) {
+      height: 860px;
+    }
+  
+    @media ($m-xl) {
+      height: 1121px;
+    }
+  }
+  
+  .astro-modul-block__pic {
+    position: absolute;
+  
+    & > img {
+      width: 100%;
+    }
+  
+  
+  
+    &--menu {
+      left: -4%;
+      bottom: 35%;
+      width: 86%;
+    }
+  
+    &--head {
+      left: 16%;
+      top: -50%;
+      width: 85%;
+  
+    }
+  
+    &--activhead {
+      left: 24%;
+      top: -44%;
+      width: 84%;
+  
+    }
+  
+    &--profile {
+      left: 32%;
+      top: -29%;
+      width: 70%;
+  
+    }
+  
+    &--activprofile {
+      left: 40%;
+      bottom: 74%;
+      width: 85%;
+  
+    }
+  
+    &--form {
+      left: 47%;
+      bottom: 52%;
+      width: 70%;
+    }
+  
+    @media ($m-l) {
+      
+    &--menu {
+      left: -5%;
+      bottom: 24%;
+      
+    }
+  
+    &--head {
+      left: 17%;
+      top: -41%;
+      
+  
+    }
+  
+    &--activhead {
+      left: 26%;
+      top: -34%;
+      
+  
+    }
+  
+    &--profile {
+      left: 35%;
+      top: -19%;
+      
+  
+    }
+  
+    &--activprofile {
+      left: 43%;
+      bottom: 64%;
+      
+  
+    }
+  
+    &--form {
+      left: 51%;
+      bottom: 41%;
+      
+  
+    }
+  }
+  
+    @media ($m-xl) {
+      width: auto;
+      
+    &--menu {
+      left: -21%;
+      bottom: 29%;
+    }
+  
+    &--head {
+      left: -3%;
+      top: -31%;
+  
+    }
+  
+    &--activhead {
+      left: 7%;
+      top: -25%;
+  
+    }
+  
+    &--profile {
+      left: 16%;
+      top: -11%;
+  
+    }
+  
+    &--activprofile {
+      left: 26%;
+      bottom: 58%;
+      width: 93%
+  
+    }
+  
+    &--form {
+      left: 36%;
+      bottom: 41%;
+  
+    }
+  }
+  }
+  
+  .astro-hide-m {
+    display: block;
+  
+    @media ($m-m) {
+      display: none;
+    }
+  }
+  
+  .astro-show-m {
+    display: none;
+  
+    @media ($m-m) {
+      display: block;
+    }
+  }
+
+  .astro-monitor-block {
+    position: relative;
+    margin: 35px 0 0 0;
+    overflow: visible;
+
+    &--one {
+
+      &::after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 200%;
+        bottom: -50%;
+        left: -50%;
+        right: -50%;
+        z-index: 1;
+        background: radial-gradient(640.11px at 50% 29.59%, #C7A378 0%, #6A507B 100%);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+  }
+
+    &--two {
+      z-index: 3;
+    }
+
+    @media ($m-m) {
+      margin: 150px 0 0 0;
+  
+      &--one {
+
+        &::after {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 200%;
+          bottom: -50%;
+          left: -50%;
+          right: -50%;
+          z-index: 1;
+          background: radial-gradient(640.11px at 50% 29.59%, #C7A378 0%, #6A507B 100%);
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+    }
+  
+      &--two {
+        z-index: 3;
+      }
+  }
+}
+
+  .astro-monitor-block__display {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+
+  }
+  
+  .astro-monitor-block__stand {
+    position: relative;
+    z-index: 3;
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+
+  }
+
+  .astro-monitor-block__shadow {
+    position: absolute;
+    z-index: 2;
+    left: 0px;
+    right: 0;
+    bottom: 0px;
+    width: 100%;
+
+    @media ($m-l) {
+      bottom: -45px;
+    }
+  }
+  
+  .astro-page {
+
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1605px;
+      top: -29%;
+      right: -7%;
+      z-index: 2;
+      background-image: url('/img/portfolio/astro/home/bg/stars.png');
+  
+      opacity: 0.5;
+      
+    }
+  
+    @media ($m-s) {
+  
+      &::before {
+        content: '';
+        width: 100%;
+        height: 1605px;
+        top: -8%;
+        right: -7%;
+        
+      }
+    }
+  
+    @media ($m-m) {
+      padding-left: 40%;
+  
+      &::before {
+        content: '';
+        width: 100%;
+        height: 1842px;
+        top: -10%;
+        right: -40%;
+        
+      }
+    }
+  }
+  
+  .astro-page-row {
+    display: flex;
+    align-items: center;
+  
+    &--active {
+  
+    &:hover {
+  
+      & .page__screen {
+        z-index: 3;
+        transform: scale(1.1);
+        box-shadow: 0 0 10px rgba(0,0,0,.1);
+      }
+  
+      & .sidebar__title {
+        font-weight: 700;
+      }
+  
+      & .sidebar__line {
+  
+        &::after {
+          width: 140%;
+        }
+  
+        & > span {
+          width: 20px;
+          height: 20px;
+          background-color: #594266;
+          transition-delay: 0ms;
+  
+          & > span {
+            opacity: 1;
+  
+            &:nth-child(1) {
+              transition-delay: 200ms;
+            }
+  
+            &:nth-child(2) {
+              transition-delay: 400ms;
+            }
+  
+            &:nth-child(3) {
+              transition-delay: 600ms;
+            }
+          }
+        }
+      }
+    }
+  }
+  }
+  
+  .astro-page-row__side {
+    display: none;
+  
+    @media ($m-m) {
+      position: absolute;
+      display: block;
+      flex-shrink: 0;
+      width: 24%;
+      left: 10%;
+    }
+  
+    @media ($m-xl) {
+      position: absolute;
+      display: block;
+      flex-shrink: 0;
+      width: 18%;
+      left: 17%;
+    }
+  }
+  
+  .astro-page-row__body {
+    position: relative;
+    // width: 100%;
+    box-shadow: 0 0 5px rgba(0,0,0,.1);
+  
+    &--top {
+      border-radius: 8px 8px 0 0;
+    }
+    &--bottom {
+      border-radius: 0 0 8px 8px;
+    }
+  }
+  
+  .astro-page__screen {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    transition: transform 200ms;
+  
+    &--top {
+      border-radius: 8px 8px 0 0;
+    }
+  
+    &--left {
+      width: 100%;
+      transition: unset;
+    }
+  
+  //   &--bottom {
+  //     border-radius: 0 0 8px 8px;
+  //   }
+  }
+  
+  .astro-sidebar__title {
+    position: relative;
+    z-index: 5;
+    font-family: 'P22 Underground CY Pro';
+    font-weight: 800;
+    color: $c-white;
+    font-size: 25px;
+    transition: font-weight 200ms;
+  
+    @media ($m-l) {
+      font-size: 30px;
+    }
+  }
+  
+  .astro-sidebar__subtitle {
+    position: relative;
+    z-index: 5;
+    color: #594266;
+    width: 300px;
+    max-width: 100%;
+  
+    font-family: 'P22 Underground CY Pro';
+    font-weight: 200;
+  
+    @media ($m-m) {
+      font-size: 16px;
+    }
+  
+    @media ($m-l) {
+      font-size: 18px;
+    }
+  }
+  
+  .astro-sidebar__line {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    height: 1px;
+    margin: 22px 0;
+    background-color: #594266;
+  
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 1px;
+      background-color: #594266;
+      transition: width 400ms;
+    }
+  
+    & > span {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      margin: auto 0;
+      width: 7px;
+      height: 7px;
+      border-radius: 100%;
+      background-color: #594266;
+      transition: width 200ms, height 200ms, background-color 200ms;
+      transition-delay: 400ms;
+
+    }
+  }
+
+  .astro-screens-block {
+    display: flex;
+    justify-content: space-between;
+    // margin: -10px 0 0 -10px;
+  
+    @media ($m-m) {
+      margin: -20px 0 0 -20px;
+    }
+
+    @media ($m-l) {
+      margin: -30px 0 0 -30px;
+    }
+  }
+  
+  .astro-screens-block__col {
+    
+    padding: 10px 0 0 10px;
+  
+    @media ($m-m) {
+      padding: 20px 0 0 20px;
+    }
+
+    @media ($m-l) {
+      padding: 30px 0 0 30px;
+    }
+  }
+  
+  .astro-screens-block__item {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+
+    transition: transform 200ms, box-shadow 200ms;
+
+  
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    @media ($m-m) {
+
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
+
+    @media ($m-l) {
+
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+
+    transition: transform 200ms, box-shadow 200ms;
+
+  
+    &:not(:last-child) {
+      margin-bottom: 100px;
+    }
+
+    &:hover {
+      z-index: 1;
+      transform: scale(1.1);
+      box-shadow: 0 0 5px rgba(0,0,0,.1);
+    }
+  }
+}
+
+.astro-signs {
+    display: none;
+
+    @media ($m-l) {
+        display: block;
+        position: absolute;
+        height: 1020px;
+        width: 100%;
+    }
+}
+.astro-signs__pic {
+   position: absolute;
+   z-index: 1;
+   color: #ffff;
+
+   -webkit-filter: blur(2px);
+   filter: blur(2px);
+
+   opacity: 0.8;
+
+   &--aquarius {
+    top: -5%;
+    bottom: auto;
+    left: auto;
+    right: 25%;
+    width: 218px;
+    height: 300px;
+    transform: rotate(0.32deg);
+       
+   }
+
+   &--aries {
+    top: auto;
+    bottom: 15%;
+    left: auto;
+    right: 25%;
+    width: 161px;
+    height: 88px;
+
+   }
+
+   &--capricorn {
+    top: auto;
+    bottom: 43%;
+    left: auto;
+    right: 22%;
+    width: 211px;
+    height: 188px;
+   }
+
+   &--cencer {
+    top: 30%;
+    bottom: auto;
+    left: 20%;
+    right: auto;
+
+   }
+
+   &--gemini {
+    top: auto;
+    bottom: 10%;
+    left: 35%;
+    right: auto;
+    width: 221.67px;
+    height: 186.09px;
+
+   }
+
+   &--leo {
+    top: auto;
+    bottom: 15%;
+    left: 22%;
+    right: auto;
+    width: 186.3px;
+    height: 297.53px;
+
+   }
+
+   &--libra {
+    top: -5%;
+    bottom: auto;
+    left: 17%;
+    right: auto;
+    width: 137.32px;
+    height: 167.07px;
+
+   }
+
+   &--pisces {
+    top: auto;
+    bottom: 15%;
+    left: auto;
+    right: 5%;
+    width: 238px;
+    height: 351.9px;
+
+   }
+
+   &--sagittarius {
+    top: -7%;
+    bottom: auto;
+    left: auto;
+    right: 44%;
+    width: 308.75px;
+    height: 251.33px;
+
+   }
+
+//    &--scoprio {
+//     top: 5%;
+//     bottom: auto;
+//     left: 30%;
+//     right: auto;
+
+//    }
+
+   &--taurus {
+    top: auto;
+    bottom: 10%;
+    left: auto;
+    right: 35%;
+    width: 189.02px;
+    height: 267.64px;
+
+   }
+
+   &--virgo {
+    top: 15%;
+    bottom: auto;
+    left: 5%;
+    right: auto;
+    width: 178.13px;
+    height: 349.18px;
+
+   }
+
+   &--aquariuscont {
+    width: 338.27px;
+    height: 476.48px;
+    top: auto;
+    bottom: -50%;
+    left: 11%;
+    right: auto;
+    z-index: 2;
+    color: #D3C5D7;
+
+    -webkit-filter: none;
+    filter: none;
+
+    opacity: 0.5;
+       
+   }
+
+   &--leocont {
+    width: 353px;
+    height: 500px;
+    top: 0;
+    bottom: auto;
+    left: auto;
+    right: 20%;
+    z-index: 2;
+    color: #E4C781;
+
+    -webkit-filter: none;
+    filter: none;
+    
+    opacity: 0.5;
+   }
+
+   &--aquarius_ui{
+    width: 334.6px;
+    height: 471.31px;
+    top: auto;
+    bottom: -25%;
+    left: 20%;
+    right: auto;
+    z-index: 2;
+
+    mix-blend-mode: overlay;
+
+    -webkit-filter: none;
+    filter: none;
+
+    transform: rotate(-65deg);
+
+    opacity: 0.5;
+
+   }
+
+   &--cencer_end {
+    width: 169.97px;
+    height: 167.07px;
+    top: auto;
+    bottom: 40%;
+    left: auto;
+    right: 10%;
+    z-index: 2;
+
+    -webkit-filter: none;
+    filter: none;
+
+    mix-blend-mode: overlay;
+
+   }
+
+   &--pisces_end {
+    width: 238px;
+    height: 351.9px;
+    top: -10%;
+    bottom: auto;
+    left: auto;
+    right: 20%;
+    z-index: 2;
+
+    
+    -webkit-filter: none;
+    filter: none;
+
+    mix-blend-mode: overlay;
+
+   }
+
+   &--virgo_end {
+    width: 178.13px;
+    height: 349.18px;
+    top: 15%;
+    bottom: auto;
+    left: 15%;
+    right: auto;
+    z-index: 2;
+    
+    -webkit-filter: none;
+    filter: none;
+
+    mix-blend-mode: overlay;
+
+   }
+
+}
+
+.astro-stars {
+    position: absolute;
+    z-index: 2;
+  
+    &--sun {
+      top: -15%;
+      right: -35%;
+      width: 85%;
+      
+    }
+  
+    &--moon {
+      bottom: -34%;
+      left: -20%;
+      width: 55%;
+    }
+  
+    @media ($m-s) {
+      &--sun {
+        top: -60%;
+        right: -35%;
+        width: 75%;
+        
+      }
+    
+      &--moon {
+        bottom: -50%;
+        left: -25%;
+        width: 45%;
+      }
+  }
+  
+  @media ($m-m) {
+    &--sun {
+      top: -55%;
+      right: -30%;
+      width: 62%;
+      
+    }
+  
+    &--moon {
+      bottom: -43%;
+      left: -22%;
+      width: 40%;
+    }
+  }
+  
+  @media ($m-l) {
+  
+    &--moon {
+      bottom: -25%;
+  
+    }
+  }
+  
+    @media ($m-xl) {
+      &--sun {
+        top: -45%;
+        right: -25%;
+        width: 52%
+        
+      }
+    
+      &--moon {
+        bottom: -20%;
+        left: -15%;
+        width: 35%;
+      }
+  }
+  }
+  
+  .astro-system-block {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 5%;
+    z-index: 2;
+
+    &--home {
+      position: absolute;
+      top: 10%;
+      height: 300px;
+      width: 100%;
+      z-index: 2;
+    }
+  
+    @media ($m-s) {
+      &--home {
+        position: absolute;
+        top:-3%;
+        height: 300px;
+        width: 100%;
+        z-index: 2;
+      }
+  
+    }
+
+    @media ($m-m) {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 5%;
+      z-index: 2;
+  
+      &--home {
+        position: absolute;
+        top: 10%;
+        height: 300px;
+        width: 100%;
+        z-index: 2;
+      }
+  
+    }
+  }
+  
+  .astro-system-block__orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 55%;
+    transform: translate3d(-50%, -50%, 0);
+  
+    &::after {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+
+    &--right {
+      top: 80%;
+      left: 85%;
+    }
+
+    &--m {
+        width: 25%;
+    }
+  
+    &--n {
+        width: 42%;
+    }
+  
+    &--l {
+        width: 60%;
+    }
+
+    &--x {
+        width: 82%;
+    }
+  }
+  
+  .astro-system-block__orbit-circle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 1px solid rgba(215, 215, 215, 0.1);
+  
+    &--m {
+      animation: orbit 15s reverse infinite linear;
+    }
+
+    &--n {
+      animation: orbit 30s infinite linear;
+    }
+  
+    &--l {
+      animation: orbit 40s reverse infinite linear;
+    }
+  }
+  
+  .astro-system-block__planet {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    background-color: #E4C781;
+    box-shadow: 0 0 100px rgba(0, 0, 0, .3);
+    transform: translate3d(-50%, -50%, 0);
+  
+    &::after {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+  
+    &--l {
+      width: 12%;
+    }
+  }
+  
+  @keyframes orbit {
+    0% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+  .astro-uikit-showbox {
+    position: relative;
+    z-index: 3;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 715px;
+        height: 400px;
+        bottom: -55px;
+        left: -220px;
+        right: 0;
+        z-index: 2;
+        background-image: url('/img/portfolio/astro/uikit/bg/Аа.png');
+        background-repeat: no-repeat;
+  
+        opacity: 0.3;
+    }
+}
+
+.astro-uikit-showbox__row {
+    display: flex;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    color: white;
+
+}
+
+.astro-uikit-showbox__col {
+    flex-grow: 1;
+    max-width: 100%;
+
+    @media ($m-m) {
+        max-width: 75%;
+    }
+
+    @media ($m-xl) {
+        max-width: 52%;
+    }
+}
+
+.astro-uikit-showbox__fonts-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -40px 0 0 -40px;
+    align-items: flex-start;
+    justify-content: center;
+
+    @media ($m-m) {
+        justify-content: flex-start; 
+    }
+
+}
+
+.astro-uikit-showbox__fonts-item {
+    padding: 40px 0 0 40px;
+
+    &--mt {
+        margin-top: 55px;
+    }
+
+}
+
+.astro-fonts__pic {
+    
+    & > svg {
+        width: auto;
+    }
+
+}
+
+.astro-fonts__subtitle {
+    padding-top: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+
+    &--mw {
+        max-width: 100%;
+        font-family: 'P22 Underground CY Pro';
+        font-weight: 800;
+    }
+
+    &--fw {
+        font-family: 'MinionPro';
+        font-weight: 400;
+    }
+
+    @media ($m-m) {
+        padding-top: 50px;
+        font-size: 30px;
+        font-weight: 700;
+        text-align: left;
+    
+        &--mw {
+            max-width: 65%;
+            font-family: 'P22 Underground CY Pro';
+            font-weight: 800;
+        }
+    
+        &--fw {
+            font-family: 'MinionPro';
+            font-weight: 400;
+        }
+    }
+}
+
+.astro-fonts-pixel {
+    font-size: 17px;
+    font-family: 'P22 Underground CY Pro';
+    font-weight: 800;
+
+    @media ($m-m) {
+        font-size: 30px;
+    }
+}

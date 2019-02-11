@@ -1,0 +1,95 @@
+.stars {
+  position: absolute;
+  z-index: 2;
+
+  &--sun {
+    top: -15%;
+    right: -35%;
+    width: 85%;
+    
+  }
+
+  &--moon {
+    bottom: -34%;
+    left: -20%;
+    width: 55%;
+  }
+
+  @media ($m-s) {
+    &--sun {
+      top: -60%;
+      right: -35%;
+      width: 75%;
+      
+    }
+  
+    &--moon {
+      bottom: -50%;
+      left: -25%;
+      width: 45%;
+    }
+}
+
+@media ($m-m) {
+  &--sun {
+    top: -55%;
+    right: -30%;
+    width: 62%;
+    
+  }
+
+  &--moon {
+    bottom: -43%;
+    left: -22%;
+    width: 40%;
+  }
+}
+
+@media ($m-l) {
+
+  &--moon {
+    bottom: -25%;
+
+  }
+}
+
+  @media ($m-xl) {
+    &--sun {
+      top: -45%;
+      right: -25%;
+      width: 52%
+      
+    }
+  
+    &--moon {
+      bottom: -20%;
+      left: -15%;
+      width: 35%;
+    }
+}
+
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   height: 1402px;
+  //   bottom: -77%;
+  //   left: 0;
+  //   right: 0;
+  //   z-index: 2;
+  //   background: transparent;
+  //   background: radial-gradient(1089.00px at 50.5% 50%, #FF6700 0%, #D45600 7.07%, #A34200 16.16%, #773000 26.26%, #522100 36.36%, #341500 46.46%, #1D0C00 57.58%, #0D0500 69.7%, #030100 82.83%, #000000 100%);
+  // }
+
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   height: 1402px;
+  //   bottom: -77%;
+  //   left: 0;
+  //   right: 0;
+  //   z-index: 2;
+  //   background: transparent;
+  //   background: radial-gradient(990.00px at 50.5% 50%, #FFFFFF 0%, #E6E6E6 7.07%, #CCCCCC 16.16%, #B3B3B3 26.26%, #999999 36.36%, #666666 46.46%, #333333 57.58%, #1A1A1A 69.7%, #030100 82.83%, #000000 100%);
+  // }
+
+}

@@ -1,0 +1,133 @@
+.system-block {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 5%;
+    z-index: 2;
+
+    &--home {
+      position: absolute;
+      top: 10%;
+      height: 300px;
+      width: 100%;
+      z-index: 2;
+    }
+  
+    @media ($m-s) {
+      &--home {
+        position: absolute;
+        top:-3%;
+        height: 300px;
+        width: 100%;
+        z-index: 2;
+      }
+  
+    }
+
+    @media ($m-m) {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 5%;
+      z-index: 2;
+  
+      &--home {
+        position: absolute;
+        top: 10%;
+        height: 300px;
+        width: 100%;
+        z-index: 2;
+      }
+  
+    }
+  }
+  
+  .system-block__orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 55%;
+    transform: translate3d(-50%, -50%, 0);
+  
+    &::after {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+
+    &--right {
+      top: 80%;
+      left: 85%;
+    }
+
+    &--m {
+        width: 25%;
+    }
+  
+    &--n {
+        width: 42%;
+    }
+  
+    &--l {
+        width: 60%;
+    }
+
+    &--x {
+        width: 82%;
+    }
+  }
+  
+  .system-block__orbit-circle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 1px solid rgba(215, 215, 215, 0.1);
+  
+    &--m {
+      animation: orbit 15s reverse infinite linear;
+    }
+
+    &--n {
+      animation: orbit 30s infinite linear;
+    }
+  
+    &--l {
+      animation: orbit 40s reverse infinite linear;
+    }
+  }
+  
+  .system-block__planet {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    background-color: #E4C781;
+    box-shadow: 0 0 100px rgba(0, 0, 0, .3);
+    transform: translate3d(-50%, -50%, 0);
+  
+    &::after {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+  
+    &--l {
+      width: 12%;
+    }
+  }
+  
+  @keyframes orbit {
+    0% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }

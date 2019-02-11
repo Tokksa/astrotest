@@ -1,0 +1,116 @@
+.uikit-showbox {
+    position: relative;
+    z-index: 3;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 715px;
+        height: 400px;
+        bottom: -55px;
+        left: -220px;
+        right: 0;
+        z-index: 2;
+        background-image: url('/assets/img/uikit/bg/Аа.png');
+        background-repeat: no-repeat;
+  
+        opacity: 0.3;
+    }
+}
+
+.uikit-showbox__row {
+    display: flex;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    color: white;
+
+}
+
+.uikit-showbox__col {
+    flex-grow: 1;
+    max-width: 100%;
+
+    @media ($m-m) {
+        max-width: 75%;
+    }
+
+    @media ($m-xl) {
+        max-width: 52%;
+    }
+}
+
+.uikit-showbox__fonts-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -40px 0 0 -40px;
+    align-items: flex-start;
+    justify-content: center;
+
+    @media ($m-m) {
+        justify-content: flex-start; 
+    }
+
+}
+
+.uikit-showbox__fonts-item {
+    padding: 40px 0 0 40px;
+
+    &--mt {
+        margin-top: 55px;
+    }
+
+}
+
+.fonts__pic {
+    
+    & > svg {
+        width: auto;
+    }
+
+}
+
+.fonts__subtitle {
+    padding-top: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+
+    &--mw {
+        max-width: 100%;
+        font-family: 'P22 Underground CY Pro';
+        font-weight: 800;
+    }
+
+    &--fw {
+        font-family: 'MinionPro';
+        font-weight: 400;
+    }
+
+    @media ($m-m) {
+        padding-top: 50px;
+        font-size: 30px;
+        font-weight: 700;
+        text-align: left;
+    
+        &--mw {
+            max-width: 65%;
+            font-family: 'P22 Underground CY Pro';
+            font-weight: 800;
+        }
+    
+        &--fw {
+            font-family: 'MinionPro';
+            font-weight: 400;
+        }
+    }
+}
+
+.fonts-pixel {
+    font-size: 17px;
+    font-family: 'P22 Underground CY Pro';
+    font-weight: 800;
+
+    @media ($m-m) {
+        font-size: 30px;
+    }
+}

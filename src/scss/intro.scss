@@ -1,0 +1,81 @@
+.intro {
+
+    &--foot {
+    padding: 0px 0 185px;
+    }
+
+    @media ($m-s) {
+
+        &--foot {
+            padding: 0px 0 250px;
+        }
+    }
+
+    @media ($m-m) {
+
+        &--foot {
+            padding: 30px 0 400px;
+        }
+    }
+
+    @media ($m-l) {
+
+        &--foot {
+            padding: 30px 0 434px;
+        }
+    }
+
+    @media ($m-xl) {
+        &--foot {
+        padding: 150px 0 750px;
+        }
+    }
+}
+
+.intro__logo {
+    flex-shrink: 0;
+    z-index: 2;
+    width: 500px;
+    max-width: 100%;
+    margin: 0;
+  
+    & > img {
+      display: block;
+    }
+
+    @media ($m-m) {
+        margin: 0 0 75px 0;
+
+    }
+}
+  
+.intro__slogan {
+    z-index: 2;
+    font-family: 'P22 Underground CY Pro';
+    font-weight: 200;
+    font-size: 15px;
+    color: $c-white;
+    text-align: center;
+
+    @media ($m-m) {
+        font-size: 24px;
+
+    }
+  }
+
+.intro__pic {
+    position: absolute;
+    top: auto;
+    bottom: 0%;
+    left: -5%;
+    right: -5%;
+    z-index: 4;
+    margin: 0 auto;
+
+
+
+    & > img {
+        width: 100%;
+
+    }
+}

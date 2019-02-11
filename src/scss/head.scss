@@ -1,0 +1,169 @@
+.head {
+  position: relative;
+  padding-top: 100px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 2160px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: transparent;
+    background: linear-gradient(36.68deg, #6A507B 69.92%, #C7A378 88.71%);
+  }
+
+  &::after {
+    display: none;
+    content: '';
+    position: absolute;
+    height: 2160px;
+    top: -5%;
+    left: -90%;
+    right: 0;
+    z-index: 2;
+    background: transparent;
+    background: radial-gradient(990.00px at 50.5% 50%, #FFFFFF 0%, #E6E6E6 7.07%, #CCCCCC 16.16%, #B3B3B3 26.26%, #999999 36.36%, #666666 46.46%, #333333 57.58%, transparent 69.7%, transparent 82.83%, transparent 100%);
+  
+    opacity: 0.3;
+  }
+  
+  @media ($m-s) {
+
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      height: 2160px;
+      top: -170%;
+      left: -140%;
+      right: 0;
+      z-index: 2;
+      background: transparent;
+      background: radial-gradient(990.00px at 50.5% 50%, #FFFFFF 0%, #E6E6E6 7.07%, #CCCCCC 16.16%, #B3B3B3 26.26%, #999999 36.36%, #666666 46.46%, #333333 57.58%, transparent 69.7%, transparent 82.83%, transparent 100%);
+    
+      opacity: 0.3;
+    }
+  }
+
+  @media ($m-m) {
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 2160px;
+      top: -95%;
+      left: -145%;
+      right: 0;
+      z-index: 2;
+      background: transparent;
+      background: radial-gradient(990.00px at 50.5% 50%, #FFFFFF 0%, #E6E6E6 7.07%, #CCCCCC 16.16%, #B3B3B3 26.26%, #999999 36.36%, #666666 46.46%, #333333 57.58%, transparent 69.7%, transparent 82.83%, transparent 100%);
+    
+      opacity: 0.3;
+    }
+  }
+
+  @media ($m-l) {
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 2160px;
+      top: -50%;
+      left: -120%;
+      right: 0;
+      z-index: 2;
+      background: transparent;
+      background: radial-gradient(990.00px at 50.5% 50%, #FFFFFF 0%, #E6E6E6 7.07%, #CCCCCC 16.16%, #B3B3B3 26.26%, #999999 36.36%, #666666 46.46%, #333333 57.58%, transparent 69.7%, transparent 82.83%, transparent 100%);
+    
+      opacity: 0.3;
+    }
+  }
+
+  @media ($m-xl) {
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 2160px;
+      top: -5%;
+      left: -90%;
+      right: 0;
+      z-index: 2;
+      background: transparent;
+      background: radial-gradient(990.00px at 50.5% 50%, #FFFFFF 0%, #E6E6E6 7.07%, #CCCCCC 16.16%, #B3B3B3 26.26%, #999999 36.36%, #666666 46.46%, #333333 57.58%, transparent 69.7%, transparent 82.83%, transparent 100%);
+    
+      opacity: 0.3;
+    }
+  }
+}
+
+.head__bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &--stars {
+    z-index: 2;
+    background-image: url('../img/head/stars.png')
+  }
+
+  @media ($m-s) {
+
+    top: 100px;
+}
+  @media ($m-xl) {
+
+    top: 0;
+
+    &--stars {
+      z-index: 1;
+    }
+}
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+}
+
+.head__inner {
+  padding: 115px 0 30px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 1402px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-image: url('/assets/img/head/wind.png');
+
+    mix-blend-mode: overlay;
+  }
+
+  @media ($m-m) {
+    padding: 115px 0 70px;
+}
+
+  @media ($m-l) {
+    padding: 115px 0 300px;
+}
+
+  @media ($m-xl) {
+    padding: 295px 0 460px;
+}
+
+}
+

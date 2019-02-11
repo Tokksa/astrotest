@@ -1,0 +1,160 @@
+.lavel-block {
+    position: relative;
+    display: flex;
+    z-index: 3;
+    justify-content: space-between;
+    height: 1100px;
+    text-align: center;
+
+    @media ($m-s) {
+        text-align: left;
+
+    }
+}
+
+.lavel-block__inner {
+    position: absolute;
+    height: 25%;
+    width: 100%;
+
+
+    &--one {
+        top: -4%;
+        left: 0;
+    }
+
+    &--two {
+        top: 18%;
+    }
+
+    &--three {
+        top: 41%;
+    }
+
+    &--four {
+        top: 67%;
+    }
+
+    @media ($m-s) {
+
+        height: 25%;
+        width: 25%;
+    
+    
+        &--one {
+            top: 0;
+            left: 0;
+        }
+    
+        &--two {
+            top: 20%;
+            left: 20%;
+        }
+    
+        &--three {
+            top: 39%;
+            left: 45%;
+        }
+    
+        &--four {
+            top: 60%;
+            left: 70%;
+        }
+
+    }
+
+    @media ($m-m) {
+
+        &--one {
+            top: -7%;
+            left: 0;
+        }
+    
+        &--two {
+            top: 16%;
+            left: 20%;
+        }
+    
+        &--three {
+            top: 39%;
+            left: 45%;
+        }
+    
+        &--four {
+            top: 62%;
+            left: 70%;
+        }
+
+    }
+    
+    @media ($m-l) {
+
+        height: 25%;
+        width: 25%;
+    
+    
+        &--one {
+            top: 0;
+            left: 0;
+        }
+    
+        &--two {
+            top: 20%;
+            left: 25%;
+        }
+    
+        &--three {
+            top: 39%;
+            left: 50%;
+        }
+    
+        &--four {
+            top: 60%;
+            left: 80%;
+        }
+
+    }
+}
+
+.lavel-block__title {
+    font-family: 'P22 Underground CY Pro';
+    font-size: 17px;
+    font-weight: 300;
+    color: #E4C781;
+
+    @media ($m-s) {
+        font-size: 20px;
+    }
+}
+
+.lavel-block__number {
+    font-family: 'Gotham Pro';
+    font-size: 150px;
+    font-weight: 700;
+    align-content: center;
+    color: #6A507B;
+    opacity: 0.8;
+
+    @media ($m-s) {
+        font-size: 150px;
+    }
+
+    @media ($m-m) {
+        font-size: 200px;
+    }
+}
+
+.lavel-block__subtitle {
+    font-family: 'P22 Underground CY Pro';
+    font-size: 14px;
+    font-weight: 200;
+    color: #ffff;
+
+    @media ($m-s) {
+        font-size: 16px;
+    }
+
+    @media ($m-m) {
+        font-size: 20px;
+    }
+}

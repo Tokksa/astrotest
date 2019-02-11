@@ -1,0 +1,80 @@
+.monitor-block {
+    position: relative;
+    margin: 35px 0 0 0;
+    overflow: visible;
+
+    &--one {
+
+      &::after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 200%;
+        bottom: -50%;
+        left: -50%;
+        right: -50%;
+        z-index: 1;
+        background: radial-gradient(640.11px at 50% 29.59%, #C7A378 0%, #6A507B 100%);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+  }
+
+    &--two {
+      z-index: 3;
+    }
+
+    @media ($m-m) {
+      margin: 150px 0 0 0;
+  
+      &--one {
+
+        &::after {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 200%;
+          bottom: -50%;
+          left: -50%;
+          right: -50%;
+          z-index: 1;
+          background: radial-gradient(640.11px at 50% 29.59%, #C7A378 0%, #6A507B 100%);
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+    }
+  
+      &--two {
+        z-index: 3;
+      }
+  }
+}
+
+  .monitor-block__display {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+
+  }
+  
+  .monitor-block__stand {
+    position: relative;
+    z-index: 3;
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+
+  }
+
+  .monitor-block__shadow {
+    position: absolute;
+    z-index: 2;
+    left: 0px;
+    right: 0;
+    bottom: 0px;
+    width: 100%;
+
+    @media ($m-l) {
+      bottom: -45px;
+    }
+  }
